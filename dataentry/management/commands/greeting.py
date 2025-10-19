@@ -2,5 +2,9 @@ from django.core.management.base import BaseCommand
 
 class Command(BaseCommand):
     help="greets the user"
+    def add_arguments(self, parser):
+        parser.add_argument('name',type='str',help='specifies name')
+        
     def handle(self, *args, **kwargs):
-       self.stdout.write("hi bavuka good morning")
+       name=kwargs.get("name")
+       self.stdout.write(f"hi {name} good morning")
