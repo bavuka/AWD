@@ -20,5 +20,5 @@ from . import views
 
 urlpatterns = [
    
-    path('importdata',views.ImportDataForm.as_view(),name='importdataform')
+    path('importdata',views.ImportDataForm.as_view(),name='importdata')
 ]
